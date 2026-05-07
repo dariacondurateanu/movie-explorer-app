@@ -1,3 +1,5 @@
+Link catre aplicatia live - daria-movie-explorer.netlify.app
+
 1. Introducere
 Aplicația „Movie Explorer” este o aplicație web dezvoltată folosind HTML, CSS și JavaScript, care permite utilizatorilor să caute informații despre filme și să își salveze filmele preferate într-o bază de date cloud.
 Aplicația utilizează două servicii cloud externe:
