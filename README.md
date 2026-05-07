@@ -44,7 +44,7 @@ Exemplu request: https://www.omdbapi.com/?t=Interstellar&apikey=API_KEY
 4. Flux de date
 Flux aplicație
 1.	Utilizatorul se autentifică sau își creează cont. 
-2.	Introduce numele unui film. 
+2.	Introduce numele unui film, daca acesta este gresit va primi o eroare.
 3.	Aplicația trimite request către OMDb API. 
 4.	OMDb API returnează informațiile despre film. 
 5.	Utilizatorul poate salva filmul. 
