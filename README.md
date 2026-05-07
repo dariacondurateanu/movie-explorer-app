@@ -1,3 +1,5 @@
+Link catre aplicatia live - daria-movie-explorer.netlify.app
+
 1. Introducere
 Aplicația „Movie Explorer” este o aplicație web dezvoltată folosind HTML, CSS și JavaScript, care permite utilizatorilor să caute informații despre filme și să își salveze filmele preferate într-o bază de date cloud.
 Aplicația utilizează două servicii cloud externe:
@@ -44,7 +46,7 @@ Exemplu request: https://www.omdbapi.com/?t=Interstellar&apikey=API_KEY
 4. Flux de date
 Flux aplicație
 1.	Utilizatorul se autentifică sau își creează cont. 
-2.	Introduce numele unui film. 
+2.	Introduce numele unui film, daca acesta este gresit va primi o eroare.
 3.	Aplicația trimite request către OMDb API. 
 4.	OMDb API returnează informațiile despre film. 
 5.	Utilizatorul poate salva filmul. 
