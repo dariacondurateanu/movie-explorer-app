@@ -1,0 +1,399 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  margin: 0;
+  color: white;
+}
+
+/* TITLE */
+h2 {
+  padding: 20px 60px;
+  font-size: 32px;
+  color: #38bdf8;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 60px 100px;
+}
+
+/* LEFT */
+.left {
+  max-width: 600px;
+}
+
+/* RIGHT */
+.right {
+  max-width: 450px;
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+/* SEARCH */
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  background: #1e293b;
+  color: white;
+  font-size: 16px;
+}
+
+/* CLEAR */
+.clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* BUTTON */
+button {
+  padding: 16px 28px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+/* SPECIAL BUTTONS */
+.save-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #f43f5e, #be123c);
+}
+
+/* FILM INFO */
+#movieResult {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+#movieResult img {
+  width: 220px;
+  border-radius: 20px;
+}
+
+.movie-info {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.movie-info h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.movie-info p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* PLACEHOLDER */
+.placeholder {
+  opacity: 0.6;
+}
+
+/* LIST */
+.movie-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.08);
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  transition: 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+  background: rgba(255,255,255,0.15);
+}
+
+.movie-card img {
+  width: 55px;
+  border-radius: 8px;
+}
+
+/* DELETE */
+.delete-btn {
+  margin-left: auto;
+  background: #ef4444;
+}
+
+/* LOGIN */
+#auth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FIX LOGIN COMPLET */
+#auth {
+  width: 360px;
+  gap: 16px;
+}
+#auth {
+  position: absolute;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.6),
+    0 0 30px rgba(56,189,248,0.2);
+}
+
+#auth::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  z-index: -1;
+  filter: blur(20px);
+  opacity: 0.3;
+}
+
+/* INPUT CORECT */
+#auth input {
+  width: 100%;
+  padding: 20px;
+  font-size: 15px;
+  border-radius: 12px;
+  border: none;
+  background: #1e293b;
+  color: white;
+  box-sizing: border-box; 
+}
+
+/* BUTOANE STACK (una sub alta) */
+#auth button {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 12px;
+}
+
+/* OPTIONAL - separa butoanele */
+#auth button + button {
+  margin-top: 10px;
+}
+
+#auth {
+  display: flex;
+  flex-direction: column;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--bg) center/cover no-repeat;
+  filter: blur(40px) brightness(0.25);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+#movieResult {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.movie-card {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+  background: rgba(255,255,255,0.15);
+}
+
+.movie-card.active {
+  border: 2px solid #38bdf8;
+}
+
+#auth input {
+  transition: 0.3s;
+}
+
+#auth input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #38bdf8;
+  background: #0f172a;
+}
+#auth {
+  animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  /* LOGIN */
+  #auth {
+    width: 85%;
+    padding: 30px;
+  }
+
+  #auth input {
+    width: 100%;
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  #auth button {
+    width: 100%;
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  /* APP */
+  .container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* SEARCH */
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+    font-size: 18px;
+    padding: 18px;
+  }
+
+  /* BUTTONS */
+  button {
+    width: 100%;
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  /* FILM INFO */
+  #movieResult {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  #movieResult img {
+    width: 250px;
+  }
+
+  .movie-info {
+    width: 100%;
+  }
+
+  .movie-info h2 {
+    font-size: 42px;
+  }
+
+  .movie-info p {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  /* SAVED MOVIES */
+  .right {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .movie-card {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .movie-card span {
+    font-size: 20px;
+  }
+
+  .movie-card img {
+    width: 70px;
+  }
+
+  .delete-btn {
+    width: auto;
+    padding: 12px 18px;
+  }
+
+  /* LOGOUT */
+  .logout-btn {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h2>🎬 Movie Explorer</h2>
+
+<!-- LOGIN -->
+<div id="auth">
+  <h3>🔐 Welcome</h3>
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="register()">Register</button>
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+  <div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+
+      <div class="search-box">
+        <input type="text" id="movieInput" placeholder="Search movie...">
+        <span class="clear-btn" onclick="clearInput()">✖</span>
+      </div>
+
+      <button onclick="searchMovie()">Search</button>
+
+      <div id="movieResult">
+        <p class="placeholder">Search a movie 🎬</p>
+      </div>
+
+      <button class="save-btn" onclick="saveMovie()">Save Movie</button>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <h3>Saved Movies</h3>
+      <div id="moviesList"></div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
