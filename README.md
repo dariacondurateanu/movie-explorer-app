@@ -73,8 +73,12 @@ Response OMDb API:
 ![Search](images/firstpage.png)
 ![Saved](images/searchmovie.png)
 
+
+## Search a Wrong name
 ![Saved](images/errormovie.png)
 
+
+## Details about the movie - year, score, descriptiom
 ![Saved](images/moviedescription.png)
 
 ## Saved Movies
