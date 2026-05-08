@@ -1,6 +1,13 @@
-Link catre aplicatia live - daria-movie-explorer.netlify.app
-Link github - https://github.com/dariacondurateanu/movie-explorer-app
-Link youtube - https://youtube.com/shorts/kZitN610-OU?feature=share
+## Project Links
+
+🔗 Live Application  
+https://daria-movie-explorer.netlify.app
+
+💻 GitHub Repository  
+https://github.com/dariacondurateanu/movie-explorer-app
+
+🎥 Video Presentation  
+https://youtube.com/...
 
 1. Introducere
 Aplicația „Movie Explorer” este o aplicație web dezvoltată folosind HTML, CSS și JavaScript, care permite utilizatorilor să caute informații despre filme și să își salveze filmele preferate într-o bază de date cloud.
